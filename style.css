@@ -1,36 +1,40 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
-.container{
+
+.container {
     width: 100%;
     min-height: 100vh;
     background: rgb(126, 196, 125);
     padding: 10px;
-    
 }
-.todo-app{
+
+.todo-app {
     width: 100%;
     max-width: 540px;
-    background: #ffff;
+    background: #ffffff;
     margin: 100px auto 20px;
-    padding: 4opx auto 30px;
+    padding: 40px 20px 30px;
     border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
-.todo-app h2{
+
+.todo-app h2 {
     color: #002765;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
 }
-.todo-app h2 img{
+
+.todo-app h2 img {
     width: 30px;
     margin-left: 10px;
-
 }
-.row{
+
+.row {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -38,17 +42,18 @@
     border-radius: 30px;
     padding-left: 20px;
     margin-bottom: 25px;
-
 }
-input{
+
+input {
     flex: 1;
     border: none;
     outline: none;
     background: transparent;
     padding: 10px;
-    font-weight: 14px;
+    font-size: 14px;
 }
-button{
+
+button {
     border: none;
     outline: none;
     padding: 16px 50px;
@@ -57,28 +62,44 @@ button{
     font-size: 16px;
     cursor: pointer;
     border-radius: 40px;
+    transition: background 0.3s ease;
 }
-ul li{
+
+button:hover {
+    background: #36b824;
+}
+
+ul {
     list-style: none;
+}
+
+ul li {
+    position: relative;
     font-size: 17px;
     padding: 12px 8px 12px 50px;
     user-select: none;
     cursor: pointer;
+    border-bottom: 1px solid #ccc;
 }
-ul li::before{
+
+ul li:last-child {
+    border-bottom: none;
+}
+
+ul li.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+ul li::before {
     content: '';
     position: absolute;
     height: 28px;
     width: 28px;
     border-radius: 50%;
-    background-image: url(images/img.jpg);
+    background-image: url('images/img.jpg');
     background-size: cover;
     background-position: center;
-    top:12px;
-    left:8px;
-}
-ul li{
-
-
-    
+    top: 12px;
+    left: 8px;
 }
